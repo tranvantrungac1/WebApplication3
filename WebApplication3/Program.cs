@@ -25,7 +25,7 @@ namespace WebApplication3
                 UserManager userManager = new UserManager();
                 return userManager.AddNew(u);
             });
-            app.MapPut("/user/{id}/{fullname}", (int id, string fullname) =>
+            app.MapPut("/user/{id}", (int id, string fullname) =>
             {
                 UserManager userManager = new UserManager();
                 return userManager.UpdateFullname(id, fullname);
