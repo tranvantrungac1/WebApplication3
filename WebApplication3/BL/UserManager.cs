@@ -100,15 +100,15 @@ namespace WebApplication3.BL
             return userDAL.Insert(u);
         }
 
-        public int UpdateFullname(User u, string fullname)
+        public int UpdateFullname(int id, string fullname)
         {
             
-            return userDAL.UpdateFullname(u, fullname);
+            return userDAL.UpdateFullname(id, fullname);
         }
 
-        public int UpdatePassword(User u, string password)
+        public int UpdatePassword(int id, string password)
         {
-            return userDAL.UpdatePassword(u, password);
+            return userDAL.UpdatePassword(id, password);
         }
 
         public int Delete(int id)

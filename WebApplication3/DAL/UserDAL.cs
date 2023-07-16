@@ -112,27 +112,27 @@ namespace WebApplication3.DAL
             return cmd.ExecuteNonQuery();
         }
 
-        public int UpdateFullname(User u, string fullname)
+        public int UpdateFullname(int id, string fullname)
         {
             string sql = "UPDATE USERS SET fullname = @1 WHERE id=@0";
             SqlCommand command = new SqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@0", u.Id);
+            command.Parameters.AddWithValue("@0", id);
             command.Parameters.AddWithValue("@1", fullname);
             return command.ExecuteNonQuery();
         }
-        public int UpdateRole(User u, UserRole role)
+        public int UpdateRole(int id, UserRole role)
         {
             string sql = "UPDATE USERS SET role = @1 WHERE id=@0";
             SqlCommand command = new SqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@0", u.Id);
+            command.Parameters.AddWithValue("@0", id);
             command.Parameters.AddWithValue("@1", role);
             return command.ExecuteNonQuery();
         }
-        public int UpdatePassword(User u, string password)
+        public int UpdatePassword(int id, string password)
         {
             string sql = "UPDATE USERS SET password = @1 WHERE id=@0";
             SqlCommand command = new SqlCommand(sql, conn);
-            command.Parameters.AddWithValue("@0", u.Id);
+            command.Parameters.AddWithValue("@0", id);
             command.Parameters.AddWithValue("@1", password);
             return command.ExecuteNonQuery();
         }
